@@ -15,8 +15,18 @@ namespace Talaorasan.Server.Entities
         [Required]
         public string ImagePath { get; set; } = string.Empty;
         public string? MimeType { get; set; }
+        public FacePose Pose { get; set; }
 
         public int? ImageSizeBytes { get; set; }
         public DateTime CapturedUtc { get; set; } = DateTime.UtcNow;
+    }
+    public enum FacePose
+    {
+        Unknown = 0,
+        Front = 1,
+        Left = 2,
+        Right = 3,
+        Up = 4,
+        Down = 5
     }
 }
