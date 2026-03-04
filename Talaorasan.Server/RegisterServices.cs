@@ -17,7 +17,9 @@ namespace Talaorasan.Server
             });
 
             // Your app services (examples)
+            services.AddScoped<FileManagementService>();
             services.AddScoped<IPersonService, PersonService>();
+            services.AddScoped<IEnrollmentService, EnrollmentService>();
 
             return services;
         }

@@ -1,5 +1,6 @@
 ﻿using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
+using Talaorasan.Shared.Requests.Transaction;
 
 namespace Talaorasan.Server.Entities
 {
@@ -19,14 +20,5 @@ namespace Talaorasan.Server.Entities
 
         public int? ImageSizeBytes { get; set; }
         public DateTime CapturedUtc { get; set; } = DateTime.UtcNow;
-    }
-    public enum FacePose
-    {
-        Unknown = 0,
-        Front = 1,
-        Left = 2,
-        Right = 3,
-        Up = 4,
-        Down = 5
     }
 }
