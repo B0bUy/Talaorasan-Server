@@ -1,7 +1,7 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using Talaorasan.Server.Logic;
 using Talaorasan.Shared.Requests;
-using Talaorasan.Shared.Requests.Transaction;
+using Talaorasan.Shared.Transaction;
 
 namespace Talaorasan.Server.Endpoints
 {

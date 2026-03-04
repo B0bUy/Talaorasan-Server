@@ -10,6 +10,7 @@ using Talaorasan.Server.Seeder;
 using Talaorasan.Server.Endpoints;
 using Talaorasan.Server.Logic;
 using Talaorasan.Server;
+using Talaorasan.Server.RealTime;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -154,6 +155,6 @@ app.UseAuthorization();
 // =========================
 app.MapAuthEndpoints();  // Your Minimal API auth mapping
 app.MapPersonEndpoints();  // Your Minimal API auth mapping
-// app.MapHub<AttendanceHub>("/hubs/attendance");
+app.MapHub<TalaorasanHub>("/hubs/talaorasan");
 
 app.Run();

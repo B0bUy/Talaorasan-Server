@@ -1,5 +1,5 @@
-﻿using Talaorasan.Shared.Requests.Transaction;
-using Talaorasan.Shared.Response;
+﻿using Talaorasan.Shared.Response;
+using Talaorasan.Shared.Transaction;
 
 namespace Talaorasan.Server.Logic
 {
@@ -33,8 +33,7 @@ namespace Talaorasan.Server.Logic
         {
             try
             {
-                if (file is null || file.Length == 0) return new TransactionResponseDto<string>() { Success = false, Message = "Uplaoding failed..." };
-                //if (!file.ContentType.StartsWith("image/", StringComparison.OrdinalIgnoreCase)) return new TransactionResponseDto<string>() { Success = false, Message = "Only images are allowed..." };
+                if (file is null || file.Length == 0) return new TransactionResponseDto<string>() { Success = false, Message = "Uploading failed..." };
                 Directory.CreateDirectory("Uploads");
 
                 var safeName = Path.GetFileName(file.FileName);

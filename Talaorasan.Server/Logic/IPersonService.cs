@@ -2,8 +2,8 @@
 using Talaorasan.Server.Data;
 using Talaorasan.Server.Entities;
 using Talaorasan.Shared.Requests;
-using Talaorasan.Shared.Requests.Transaction;
 using Talaorasan.Shared.Response;
+using Talaorasan.Shared.Transaction;
 
 namespace Talaorasan.Server.Logic
 {
@@ -83,7 +83,5 @@ namespace Talaorasan.Server.Logic
                 return new CollectionResponseDto<PersonDto>(Array.Empty<PersonDto>(), 0, 0);
             }
         }
-
-
     }
 }

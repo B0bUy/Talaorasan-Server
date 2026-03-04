@@ -1,6 +1,6 @@
 ﻿using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
-using Talaorasan.Shared.Requests.Transaction;
+using Talaorasan.Shared.Transaction;
 
 namespace Talaorasan.Server.Entities
 {

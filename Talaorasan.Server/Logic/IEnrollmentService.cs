@@ -1,6 +1,6 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using Talaorasan.Server.Data;
-using Talaorasan.Shared.Requests.Transaction;
+using Talaorasan.Shared.Transaction;
 using Talaorasan.Shared.Response;
 
 namespace Talaorasan.Server.Logic
@@ -46,7 +46,7 @@ namespace Talaorasan.Server.Logic
                 {
                     PersonId = enrollment.PersonId,
                     ImagePath = uploadImage.Output,
-                    ImageSizeBytes = System.IO.File.ReadAllBytes(uploadImage.Output).Length,
+                    ImageSizeBytes = File.ReadAllBytes(uploadImage.Output).Length,
                     MimeType = enrollment.MimeType,
                     Pose = enrollment.Pose,
                     CapturedUtc = DateTime.UtcNow

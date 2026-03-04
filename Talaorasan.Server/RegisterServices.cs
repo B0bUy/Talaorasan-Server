@@ -20,6 +20,7 @@ namespace Talaorasan.Server
             services.AddScoped<FileManagementService>();
             services.AddScoped<IPersonService, PersonService>();
             services.AddScoped<IEnrollmentService, EnrollmentService>();
+            services.AddScoped<ITimeLogService, TimeLogService>();
 
             return services;
         }
